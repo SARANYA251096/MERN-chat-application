@@ -1,5 +1,3 @@
-
-
 const chatSocketRouter = (io) => {
   io.on("connection", (socket) => {
     socket.on("join-room", (data) => {
