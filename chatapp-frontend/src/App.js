@@ -1,3 +1,4 @@
+import "./App.css";
 import {
   Routes, Route
 } from "react-router-dom";
@@ -5,7 +6,7 @@ import io from "socket.io-client";
 
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Chat from "./Components/Chat";
+import JoinChat from "./Components/JoinChat";
 
 import UserContext from "./Context/UserContext";
 import useFindUser from "./Hooks/useFindUser";
@@ -24,7 +25,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route element={<PublicRoutes />}>
-            <Route path="/chat" element={<Chat />} />
+            <Route path="/" element={<JoinChat socket={socket} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Route>
