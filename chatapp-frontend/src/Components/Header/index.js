@@ -11,6 +11,7 @@ const Header = () => {
       `${process.env.REACT_APP_BASE_URL}/signout`,
       { userCredentials: true }
     );
+    console.log(response);
     if (response) {
       removeCookie("accessToken");
       navigate("/login");
@@ -18,12 +19,12 @@ const Header = () => {
   };
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         ChatApp
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -31,10 +32,10 @@ const Header = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <button onClick={handleLogout}>Login/Logout</button>
       </div>
     </nav>

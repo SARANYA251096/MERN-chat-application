@@ -76,7 +76,7 @@ const signout = async(req, res) => {
   }
 };
 
-// Forgot Password:
+// Forgot Password API:
 
 const forgotPassword = async (req, res) => {
   try {
@@ -124,7 +124,7 @@ const forgotPassword = async (req, res) => {
   }
 };
 
-// Reset Password:
+// Reset Password API:
 
 const resetPassword = async (req, res) => {
   const { userId, token, password } = req.body;

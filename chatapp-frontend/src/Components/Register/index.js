@@ -60,7 +60,7 @@ const Register = () => {
           />
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>Password: </label>
           <input
             type="password"
             className="form-control"
