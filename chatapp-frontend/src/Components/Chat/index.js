@@ -9,6 +9,7 @@ const Chat = ({ socket, userName, room }) => {
    socket.on("receive-message", (data) => {
      setMessages((list) => [...list, data]);
    });
+   
  }, [socket]);
 
   const sendMessage = async () => {
