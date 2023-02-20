@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './fp.css';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const ForgotPassword = () => {
 
   return (
     <div>
-      <h3>Forgot Password</h3>
+      <h3 id="fp">Forgot Password</h3>
       {!isEmailSent ? (
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -44,7 +45,9 @@ const ForgotPassword = () => {
           </button>
         </form>
       ) : (
-        <div>Reset password link has been sent to your email address</div>
+        <div className="reset">
+          Reset password link has been sent to your email address
+        </div>
       )}
     </div>
   );

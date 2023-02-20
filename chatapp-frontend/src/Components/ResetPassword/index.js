@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import './reset.css';
 
 const ResetPassword = () => {
   const [userData, setUserData] = useState({
@@ -35,7 +36,7 @@ const ResetPassword = () => {
 
   return (
     <div>
-      <h3>Reset Password</h3>
+      <h3 id="rs">Reset Password</h3>
       <form onSubmit={handleLogin}>
         <div className="form-group">
           <label>Password</label>

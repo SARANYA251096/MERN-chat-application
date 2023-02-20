@@ -16,7 +16,7 @@ import PublicRoutes from "./Routes/PublicRoutes";
 
 import ForgotPassword from "./Components/ForgotPassword";
 import ResetPassword from "./Components/ResetPassword";
-import Header from "./Components/Header";
+// import Header from "./Components/Header";
 // import { useState } from "react";
 
 const socket = io.connect("http://localhost:4000");
@@ -27,7 +27,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser, loading }}>
       <div>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route element={<PublicRoutes />}>
             <Route path="/" element={<JoinChat socket={socket} />} />

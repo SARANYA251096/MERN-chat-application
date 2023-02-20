@@ -22,6 +22,7 @@ body {
 .joinChatContainer h3 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 .joinChatContainer input {
   width: 255px;
@@ -31,6 +32,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
+  color: whitesmoke;
 }
 
 .joinChatContainer button {
@@ -69,10 +71,12 @@ body {
 }
 .chat-window .chat-header h3 {
   display: block;
-  padding: 0 1em 0 2em;
+  padding: 0 1em 0 3em;
   color: #fff;
-  font-weight: 700;
+  font-weight: 750;
   line-height: 45px;
+  margin: left 0.2em;
+  font-size: 30px;
 }
 
 .chat-window .chat-body {
@@ -87,6 +91,7 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  color: whitesmoke;
 }
 
 .chat-window .chat-body .message-container::-webkit-scrollbar {
@@ -96,6 +101,7 @@ body {
   height: auto;
   padding: 10px;
   display: flex;
+  color: white;
 }
 
 .chat-window .chat-body .message .message-content {
@@ -105,7 +111,7 @@ body {
   max-width: 120px;
   background-color: #43a047;
   border-radius: 5px;
-  color: white;
+  color:white;
   display: flex;
   align-items: center;
   margin-right: 5px;
@@ -118,6 +124,7 @@ body {
 
 #you {
   justify-content: flex-start;
+  height: 62px;
 }
 
 #you .message-content {
@@ -127,6 +134,7 @@ body {
 #you .message-meta {
   justify-content: flex-start;
   margin-left: 5px;
+  margin-top: 5px;
 }
 
 #other {
@@ -167,6 +175,7 @@ body {
   padding: 0 0.7em;
   font-size: 1em;
   border-right: 1px dotted #607d8b;
+  color: whitesmoke;
 
   outline: none;
   font-family: "Open Sans", sans-serif;

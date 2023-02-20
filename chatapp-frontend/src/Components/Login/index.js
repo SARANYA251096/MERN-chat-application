@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './login.css';
 
 const Login = () => {
   const [userCred, setUserCred] = useState({ email: "", password: "" });
@@ -28,39 +29,38 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h3>User Login</h3>
-      <form onSubmit={handleLogin}>
-        <div className="form-group">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            value={userCred.email}
-            placeholder="Enter email"
-            onChange={(e) => handleCred({ email: e.target.value })}
-          />
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            value={userCred.password}
-            placeholder="Password"
-            onChange={(e) => handleCred({ password: e.target.value })}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-      </form>
+    <form action="#!" id="main" onSubmit={handleLogin}>
+      <h2>Login to your account</h2>
+
+      <div class="input-parent">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          value={userCred.email}
+          placeholder="Enter email"
+          onChange={(e) => handleCred({ email: e.target.value })}
+        />
+      </div>
+
+      <div class="input-parent">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          className="form-control"
+          id="password"
+          value={userCred.password}
+          placeholder="Password"
+          onChange={(e) => handleCred({ password: e.target.value })}
+        />
+      </div>
+
+      <button type="submit">Login</button>
       <div>
         <a href="/forgotPassword">Forgot password?</a>
       </div>
-    </div>
+    </form>
   );
 };
 
