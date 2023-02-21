@@ -10,6 +10,8 @@
 body {
   margin: 0%;
   padding: 0%;
+  margin-top: 50px;
+
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
@@ -17,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: auto;
 }
 
 .joinChatContainer h3 {
@@ -80,11 +83,10 @@ body {
 }
 
 .chat-window .chat-body {
-  height: calc(450px - (45px + 70px));
-  border: 1px solid #263238;
-  background: #fff;
-
-  position: relative;
+  height: 70%;
+  border: 3px solid hsl(200, 26%, 50%);
+  /* background: #771b6f; */
+  position:relative;
 }
 .chat-window .chat-body .message-container {
   width: 100%;
@@ -92,10 +94,13 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   color: whitesmoke;
+  margin-top: 0px;
+  
 }
 
 .chat-window .chat-body .message-container::-webkit-scrollbar {
   display: none;
+
 }
 .chat-window .chat-body .message {
   height: auto;
@@ -124,11 +129,12 @@ body {
 
 #you {
   justify-content: flex-start;
-  height: 62px;
+  height: 60px;
 }
 
 #you .message-content {
   justify-content: flex-start;
+  
 }
 
 #you .message-meta {
@@ -148,8 +154,8 @@ body {
 
 #other .message-meta {
   justify-content: flex-end;
-  margin-right: 5px;
-}
+margin-left: 5px;
+  margin-top: 5px;}
 
 .message-meta #author {
   margin-left: 10px;

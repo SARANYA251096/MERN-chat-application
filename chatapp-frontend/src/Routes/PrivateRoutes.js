@@ -11,7 +11,7 @@ const PrivateRoutes = ({children, ...rest}) => {
     }
     console.log("User: ", user);
     return (
-        user ? <Outlet /> : <Navigate to='/login' />
+        user ? <Outlet /> : <Navigate to='/chat' />
     )
     
 }

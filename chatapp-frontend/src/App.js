@@ -16,6 +16,7 @@ import PublicRoutes from "./Routes/PublicRoutes";
 
 import ForgotPassword from "./Components/ForgotPassword";
 import ResetPassword from "./Components/ResetPassword";
+
 // import Header from "./Components/Header";
 // import { useState } from "react";
 
@@ -30,12 +31,15 @@ function App() {
         {/* <Header /> */}
         <Routes>
           <Route element={<PublicRoutes />}>
-            <Route path="/" element={<JoinChat socket={socket} />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/chat" element={<JoinChat socket={socket} />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/passwordReset" element={<ResetPassword />} />
           </Route>
+          {/* <Route element={<PrivateRoutes />}>
+            <Route path="/chat" element={<JoinChat socket={socket} />} />
+          </Route> */}
         </Routes>
       </div>
     </UserContext.Provider>

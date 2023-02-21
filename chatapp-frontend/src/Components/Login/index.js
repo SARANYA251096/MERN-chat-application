@@ -21,7 +21,7 @@ const Login = () => {
         { withCredentials: true }
       );
       if (response) {
-        navigate("/");
+        navigate("/chat");
       }
     } catch (error) {
       console.log("Error: ", error);
@@ -59,6 +59,9 @@ const Login = () => {
       <button type="submit">Login</button>
       <div>
         <a href="/forgotPassword">Forgot password?</a>
+      </div>
+      <div>
+        <a href="/register">Don't have an account...Register here</a>
       </div>
     </form>
   );
